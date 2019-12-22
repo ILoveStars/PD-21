@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Лаба3 - логічні вирази", "Лаба3 - логічні вирази\Лаба3 - логічні вирази.csproj", "{53788E66-7686-491C-8B56-086B036DAF12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53788E66-7686-491C-8B56-086B036DAF12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53788E66-7686-491C-8B56-086B036DAF12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53788E66-7686-491C-8B56-086B036DAF12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53788E66-7686-491C-8B56-086B036DAF12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A05F5A73-3458-44D2-9134-DCA403EB84F3}
+	EndGlobalSection
+EndGlobal
