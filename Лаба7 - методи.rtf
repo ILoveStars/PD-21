@@ -1,0 +1,336 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset204 Calibri;}}
+{\*\generator Riched20 10.0.10586}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang1033 /*\f1\lang1058\'cd\'e0\'ef\'e8\'f1\'e0\'f2\'e8 \'ef\'f0\'ee\'e3\'f0\'e0\'ec\'f3, \'f9\'ee \'e2\'e8\'ea\'ee\'ed\'f3\'ba \'ed\'e0\'f1\'f2\'f3\'ef\'ed\'b3 \'f4\'f3\'ed\'ea\'f6\'b3\'bf:\par
+1. \'c2\'e8\'e2\'ee\'e4\'e8\'f2\'fc \'ed\'e0 \'e5\'ea\'f0\'e0\'ed \'e2\'e2\'e5\'e4\'e5\'ed\'e5 \'f7\'e8\'f1\'eb\'ee \'e7 \'ea\'eb\'e0\'e2\'b3\'e0\'f2\'f3\'f0\'e8 \'e2 \'e7\'e2\'ee\'f0\'ee\'f2\'ed\'ee\'ec\'f3 \'ef\'ee\'f0\'ff\'e4\'ea\'f3(1234-4321)\par
+2. \'c2\'e8\'e2\'ee\'e4\'e8\'f2\'fc \'e1\'f3\'e4\'fc-\'ff\'ea\'f3 \'f1\'f2\'f0\'ee\'ea\'f3 \'e2 \'e7\'e2\'ee\'f0\'ee\'f2\'ed\'ee\'ec\'f3 \'ef\'ee\'f0\'ff\'e4\'ea\'f3(\'c0\'c1\'c2-\'c2\'c1\'c0)\par
+3. \'c4\'f0\'ee\'e1\'ee\'e2\'b3 \'f7\'e8\'f1\'eb\'e0 \'e2\'e8\'e2\'ee\'e4\'ff\'f2\'fc\'f1\'ff \'e2 \'e7\'e2\'ee\'f0\'ee\'f2\'ed\'ee\'ec\'f3 \'ef\'ee\'f0\'ff\'e4\'ea\'f3 \'b3 \'f6\'b3\'eb\'e0 \'f7\'e0\'f1\'f2\'e8\'ed\'e0 \'b3 \'e4\'f0\'ee\'e1\'ee\'e2\'e0(123.456-321.654)\par
+4. \'c2\'e8\'e2\'ee\'e4\'e8\'f2\'e8 \'e1\'f3\'e4\'fc-\'ff\'ea\'f3 \'f1\'f2\'f0\'ee\'ea\'f3 \'e2 \'e7\'e2\'ee\'f0\'ee\'f2\'ed\'ee\'ec\'f3 \'ef\'ee\'f0\'ff\'e4\'ea\'f3 \'b3 \'e2\'f1\'b3 \'e5\'eb\'e5\'ec\'e5\'ed\'f2\'e8 \'ef\'b3\'f1\'eb\'ff \ldblquote\'ec\'e0\'e3\'b3\'f7\'ed\'ee\'e3\'ee\par
+\'e7\'ed\'e0\'ea\'f3\rdblquote  \'f2\'e5\'e6 \'e2 \'e7\'e2\'ee\'f0\'ee\'f2\'ed\'ee\'ec\'f3(\'c0\'c1\'c2,\'c3\'c4\'c5-\'c2\'c1\'c0,\'c5\'c4\'c3)\par
+5. \'d0\'e5\'e0\'eb\'b3\'e7\'f3\'e2\'e0\'f2\'e8 \'ef\'f3\'ed\'ea\'f2\'e8 1-4 \'e7\'e0 \'e4\'ee\'ef\'ee\'ec\'ee\'e3\'ee\'fe \'ec\'e5\'f2\'ee\'e4\'b3\'e2, \'ef\'e5\'f0\'e5\'e2\'e0\'ed\'f2\'e0\'e6\'e8\'e2\'f8\'e8 \'ec\'e5\'f2\'ee\'e4\'e8 \'e4\'eb\'ff \'f0\'b3\'e7\'ed\'e8\'f5\par
+\'f2\'e8\'ef\'b3\'e2\par
+6. \'d0\'e5\'e0\'eb\'b3\'e7\'f3\'e2\'e0\'f2\'e8 \'ef\'f3\'ed\'ea\'f2\'e8 1-4 \'e7\'e0 \'e4\'ee\'ef\'ee\'ec\'ee\'e3\'ee\'fe \'f0\'e5\'ea\'f3\'f0\'f1\'b3\'bf, \'ec\'e5\'f2\'ee\'e4\'e8 \'e4\'eb\'ff \'f0\'b3\'e7\'ed\'e8\'f5 \'f2\'e8\'ef\'b3\'e2\par
+\'ef\'e5\'f0\'e5\'e2\'e0\'ed\'f2\'e0\'e6\'e8\'f2\'e8\par
+7. \'d0\'e5\'e0\'eb\'b3\'e7\'f3\'e2\'e0\'f2\'e8 \'ec\'e5\'f2\'ee\'e4, \'f9\'ee \'e1\'f3\'e4\'e5 \'ec\'e0\'f1\'e8\'e2 \'ef\'ee\'e2\'e5\'f0\'f2\'e0\'f2\'e8 \'e7\'e0\'e4\'ee\'ec \'ed\'e0\'e2\'ef\'e0\'ea\'e8(\'c2\'e8\'ea\'ee\'f0\'e8\'f1\'f2\'e0\'ed\'ed\'ff\par
+Array.Reverse() \'e7\'e0\'e1\'ee\'f0\'ee\'ed\'e5\'ed\'ee!)\par
+8. \'c2\'e8\'ea\'ee\'ed\'e0\'f2\'e8 \'ef\'f3\'ed\'ea\'f2 7 \'e7 \'e2\'e8\'ea\'ee\'f0\'e8\'f1\'f2\'e0\'ed\'ed\'ff\'ec \'ea\'eb\'fe\'f7\'ee\'e2\'e8\'f5 \'f1\'eb\'b3\'e2 ref i out*/\par
+using System;\par
+using System.Collections.Generic;\par
+using System.Linq;\par
+using System.Text;\par
+using System.Threading.Tasks;\par
+\par
+namespace \'cb\'e0\'e1\'e07___\'ec\'e5\'f2\'ee\'e4\'e8\par
+\{\par
+    class Program\par
+    \{\par
+        static void NumberTransform()\par
+        \{\par
+            Console.WriteLine("Please, enter your number");\par
+            string number = Console.ReadLine();\par
+            char[] line = number.ToCharArray();\par
+            Array.Reverse(line);\par
+            Console.Write("Transformed number: ");\par
+            Console.Write(line);\par
+        \}\par
+\par
+        static void StringTransform()\par
+        \{\par
+            Console.WriteLine("Please, enter your string");\par
+            string str = Console.ReadLine();\par
+            char[] line = str.ToCharArray();\par
+            Array.Reverse(line);\par
+            Console.Write("Transformed string: ");\par
+            Console.Write(line);\par
+        \}\par
+\par
+        static void FractionalNumberTransform()\par
+        \{\par
+            string number;\par
+            do \{\par
+                Console.WriteLine("Please, enter your number. It must be fractional");\par
+                number = Console.ReadLine();\par
+            \} while (Convert.ToDouble(number) % 1 == 0);\par
+            char[] line = number.ToCharArray();\par
+\par
+            Console.Write("Transformed number: ");\par
+            for (int i = 0; i < line.Length; i++)\par
+                if (line[i] == ',')\par
+                \{\par
+                    int k = i;\par
+                    for (i = k - 1; i >= 0; i--)\par
+                        Console.Write(line[i]);\par
+                    Console.Write(",");\par
+                    for (i = line.Length - 1; i > k; i--)\par
+                        Console.Write(line[i]);\par
+                \}\par
+        \}\par
+        \par
+        static void DividedStringTransform()\par
+        \{\par
+            string str;\par
+            Console.WriteLine("Please, enter your string");\par
+            str = Console.ReadLine();\par
+            char[] line = str.ToCharArray();\par
+\par
+            char magicsymbol;\par
+            Console.WriteLine("Please, enter magic symbol");\par
+            magicsymbol = Convert.ToChar(Console.ReadLine());\par
+\par
+            bool check = false;\par
+            for (int i = 0; i < line.Length; i++)\par
+                if (line[i] == magicsymbol)\par
+                    check = true;\par
+\par
+            if (check == true)\par
+            \{\par
+                Console.Write("Transformed string: ");\par
+                for (int i = 0; i < line.Length; i++)\par
+                    if (line[i] == magicsymbol)\par
+                    \{\par
+                        int k = i;\par
+                        for (i = k - 1; i >= 0; i--)\par
+                            Console.Write(line[i]);\par
+                        Console.Write(magicsymbol);\par
+                        for (i = line.Length - 1; i > k; i--)\par
+                            Console.Write(line[i]);\par
+                    \}\par
+            \}\par
+            else\par
+                Console.Write("Your string does not contain magic symbol");\par
+        \}\par
+\par
+        abstract class ViceVersa\par
+        \{\par
+            public static void Transform(int number)\par
+            \{\par
+                string str = Convert.ToString(number);\par
+                char[] line = str.ToCharArray();\par
+                Array.Reverse(line);\par
+                Console.Write("Transformed number: ");\par
+                Console.Write(line);\par
+            \}\par
+\par
+            public static void Transform(string str)\par
+            \{\par
+                char[] line = str.ToCharArray();\par
+                Array.Reverse(line);\par
+                Console.Write("Transformed string: ");\par
+                Console.Write(line);\par
+            \}\par
+\par
+            public static void Transform(double number)\par
+            \{\par
+                string str = Convert.ToString(number);\par
+                char[] line = str.ToCharArray();\par
+\par
+                Console.Write("Transformed number: ");\par
+                for (int i = 0; i < line.Length; i++)\par
+                    if (line[i] == ',')\par
+                    \{\par
+                        int k = i;\par
+                        for (i = k - 1; i >= 0; i--)\par
+                            Console.Write(line[i]);\par
+                        Console.Write(",");\par
+                        for (i = line.Length - 1; i > k; i--)\par
+                            Console.Write(line[i]);\par
+                    \}\par
+            \}\par
+\par
+            static void Transform(string str, char magicsymbol)\par
+            \{\par
+                char[] line = str.ToCharArray();\par
+\par
+                bool check = false;\par
+                for (int i = 0; i < line.Length; i++)\par
+                    if (line[i] == magicsymbol)\par
+                        check = true;\par
+\par
+                if (check == true)\par
+                \{\par
+                    Console.Write("Transformed string: ");\par
+                    for (int i = 0; i < line.Length; i++)\par
+                        if (line[i] == magicsymbol)\par
+                        \{\par
+                            int k = i;\par
+                            for (i = k - 1; i >= 0; i--)\par
+                                Console.Write(line[i]);\par
+                            Console.Write(magicsymbol);\par
+                            for (i = line.Length - 1; i > k; i--)\par
+                                Console.Write(line[i]);\par
+                        \}\par
+                \}\par
+                else\par
+                    Console.Write("Your string does not contain magic symbol");\par
+            \}\par
+        \}\par
+\par
+        static int[] ArrayTransform(int[] a)\par
+        \{\par
+            int i, j, t;\par
+            for (i = 0, j = a.Length - 1; i < j; i++, j--)\par
+            \{\par
+                t = a[i];\par
+                a[i] = a[j];\par
+                a[j] = t;\par
+            \}\par
+            return a;\par
+        \}\par
+\par
+        static void RefArrayTransform(ref int[] a)\par
+        \{\par
+            int i, j, t;\par
+            for (i = 0, j = a.Length - 1; i < j; i++, j--)\par
+            \{\par
+                t = a[i];\par
+                a[i] = a[j];\par
+                a[j] = t;\par
+            \}\par
+        \}\par
+\par
+        static void OutArrayTransform(out int[] a)\par
+        \{\par
+            int n;\par
+            do\par
+            \{\par
+                Console.WriteLine("Please, enter number of elements in your array. It must be bigger than 0");\par
+                n = Convert.ToInt32(Console.ReadLine());\par
+            \} while (n <= 0);\par
+\par
+            a = new int[n];\par
+\par
+            int i = 0;\par
+            for (i = 0; i < a.Length; i++)\par
+            \{\par
+                Console.Write("a[\{0\}] = ", i + 1);\par
+                a[i] = Convert.ToInt32(Console.ReadLine());\par
+            \}\par
+\par
+            int j, t;\par
+            for (i = 0, j = a.Length - 1; i < j; i++, j--)\par
+            \{\par
+                t = a[i];\par
+                a[i] = a[j];\par
+                a[j] = t;\par
+            \}\par
+        \}\par
+\par
+        static void Main(string[] args)\par
+        \{\par
+            //NumberTransform();\par
+            //StringTransform();\par
+            //FractionalNumberTransform();\par
+            //DividedStringTransform();\par
+            //ViceVersa.Transform(a);\par
+            //ArrayTransform(out a);\par
+            //RefArrayTransform(ref a);\par
+            //OutArrayTransform(out a);\par
+\par
+            Console.WriteLine("Welcome! This program allows you to transform numbers, strings or arrays with different methods");\par
+            Console.WriteLine("1. Reverse number");\par
+            Console.WriteLine("2. Reverse string");\par
+            Console.WriteLine("3. Reverse fractional number");\par
+            Console.WriteLine("4. Reverse string with magic symbol");\par
+            Console.WriteLine("5. Reverse number (overload)");\par
+            Console.WriteLine("6. Reverse string (overload)");\par
+            Console.WriteLine("7. Reverse fractional number (overload)");\par
+            Console.WriteLine("8. Reverse string with magic symbol (overload)");\par
+            Console.WriteLine("9. Reverse array");\par
+            Console.WriteLine("10. Reverse array using ref");\par
+            Console.WriteLine("11. Reverse array using out");\par
+            int method;\par
+            do\par
+            \{\par
+                Console.WriteLine("\\nWhich method do you want to use? (1-11)");\par
+                method = Convert.ToInt32(Console.ReadLine());\par
+            \} while (method <= 0 || method > 11);\par
+\par
+\par
+            switch (method)\par
+            \{\par
+                case 1:\par
+                    NumberTransform();\par
+                    break;\par
+                case 2:\par
+                    StringTransform();\par
+                    break;\par
+                case 3:\par
+                    FractionalNumberTransform();\par
+                    break;\par
+                case 4:\par
+                    DividedStringTransform();\par
+                    break;\par
+                case 5:\par
+                    Console.WriteLine("Please, enter your number");\par
+                    int number1 = Convert.ToInt32(Console.ReadLine());\par
+                    ViceVersa.Transform(number1);\par
+                    break;\par
+                case 6:\par
+                    Console.WriteLine("Please, enter your string");\par
+                    string str1 = Console.ReadLine();\par
+                    ViceVersa.Transform(str1);\par
+                    break;\par
+                case 7:\par
+                    Console.WriteLine("Please, enter your rational number");\par
+                    double number2 = Convert.ToDouble(Console.ReadLine());\par
+                    ViceVersa.Transform(number2);\par
+                    break;\par
+                case 8:\par
+                    Console.WriteLine("Please, enter your string");\par
+                    string str2 = Console.ReadLine();\par
+                    Console.WriteLine("Please, enter magic symbol");\par
+                    char magicsymbol = Convert.ToChar(Console.ReadLine());\par
+                    ViceVersa.Transform(str2);\par
+                    break;\par
+                case 9:\par
+                    int[] a1;\par
+                    int n1;\par
+                    do\par
+                    \{\par
+                        Console.WriteLine("Please, enter number of elements in your array. It must be bigger than 0");\par
+                        n1 = Convert.ToInt32(Console.ReadLine());\par
+                    \} while (n1 <= 0);\par
+                    a1 = new int[n1];\par
+                    for (int i = 0; i < n1; i++)\par
+                    \{\par
+                        Console.Write("a[\{0\}] = ", i + 1);\par
+                        a1[i] = Convert.ToInt32(Console.ReadLine());\par
+                    \}\par
+                    ArrayTransform(a1);\par
+                    Console.WriteLine("\\nNew Array:");\par
+                    for (int i = 0; i < n1; i++)\par
+                        Console.WriteLine("a[\{0\}] = \{1\}", i + 1, a1[i]);\par
+                    break;\par
+                case 10:\par
+                    int[] a;\par
+                    int n;\par
+                    do\par
+                    \{\par
+                        Console.WriteLine("Please, enter number of elements in your array. It must be bigger than 0");\par
+                        n = Convert.ToInt32(Console.ReadLine());\par
+                    \} while (n <= 0);\par
+                    a = new int[n];\par
+                    for (int i = 0; i < n; i++)\par
+                    \{\par
+                        Console.Write("a[\{0\}] = ", i + 1);\par
+                        a[i] = Convert.ToInt32(Console.ReadLine());\par
+                    \}\par
+                    RefArrayTransform(ref a);\par
+                    Console.WriteLine("\\nNew Array:");\par
+                    for (int i = 0; i < n; i++)\par
+                        Console.WriteLine("a[\{0\}] = \{1\}", i + 1, a[i]);\par
+                    break;\par
+                case 11:\par
+                    int[] a3;\par
+                    OutArrayTransform(out a3);\par
+                    Console.WriteLine("\\nNew Array:");\par
+                    for (int i = 0; i < a3.Length; i++)\par
+                        Console.WriteLine("a[\{0\}] = \{1\}", i + 1, a3[i]);\par
+                    break;\par
+            \}\par
+            \par
+            Console.ReadKey();\par
+        \}\par
+    \}\par
+\}\f0\lang1033\par
+}
+ 
